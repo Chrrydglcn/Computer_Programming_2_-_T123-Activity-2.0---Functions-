@@ -1,0 +1,13 @@
+def auth(db,id,pin):
+   flag = 0
+   for x in range(3):
+       if db[x][0] == id and db[x][1] == pin:
+           flag = 1
+   return flag
+db = [[1111,1111],[2222,2222],[3333,3333]]
+id = int(input("Enter ID: "))
+pin = int(input("Enter PIN: "))
+if(auth(db,id,pin)):
+    print("success")
+else:
+    print("failed")
